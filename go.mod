@@ -30,7 +30,8 @@ require (
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
 	gorm.io/driver/mysql v1.4.4
 	gorm.io/driver/postgres v1.4.5
-	gorm.io/gorm v1.24.2
+	github.com/godoes/gorm-oracle v1.3.38
+	gorm.io/gorm v1.24.2 
 )
 
 require (

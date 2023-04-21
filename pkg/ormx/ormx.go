@@ -7,6 +7,7 @@ import (
 
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
+	oracle "github.com/godoes/gorm-oracle"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
 )
@@ -31,6 +32,8 @@ func New(c DBConfig) (*gorm.DB, error) {
 		dialector = mysql.Open(c.DSN)
 	case "postgres":
 		dialector = postgres.Open(c.DSN)
+	case "oracle":
+		dialector = oracle.Open(c.DSN)
 	default:
 		return nil, fmt.Errorf("dialector(%s) not supported", c.DBType)
 	}
